@@ -24,16 +24,10 @@ public class MainActivity extends Activity {
 
         String[] lyricsArray = getResources().getStringArray(R.array.lyrics);
 
-        TextView lyricsView = new TextView(this);
-        lyricsView.setText(lyricsArray[0]);
-        relativeLayout.addView(lyricsView);
-
-        TextView lyricsView2 = new TextView(this);
-        lyricsView2.setText(lyricsArray[1]);
-        relativeLayout.addView(lyricsView2);
-
-        TextView lyricsView3 = new TextView(this);
-        lyricsView3.setText(lyricsArray[2]);
-        relativeLayout.addView(lyricsView3);
+        for (int i = 0; i < lyricsArray.length; i++) {
+            TextView lyricsView = new TextView(this);
+            lyricsView.setText(lyricsArray[i]);
+            relativeLayout.addView(lyricsView);
+        }
     }
 }
