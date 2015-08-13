@@ -24,10 +24,20 @@ public class MainActivity extends Activity {
 
         String[] lyricsArray = getResources().getStringArray(R.array.lyrics);
 
+        String yeah = getResources().getString(R.string.yeah);
+
         for (int i = 0; i < lyricsArray.length; i++) {
             TextView lyricsView = new TextView(this);
             lyricsView.setText(lyricsArray[i]);
             relativeLayout.addView(lyricsView);
+
+            int j = i + 1;
+
+            if(j%3 == 0) {
+                TextView yeahView = new TextView(this);
+                yeahView.setText(yeah);
+                relativeLayout.addView(yeahView);
+            }
         }
     }
 }
